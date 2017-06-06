@@ -1,0 +1,40 @@
+<?php //
+    class bootstrap
+    {
+        function __construct() {
+            //require '../App/Model/connectSql.php';
+            //require '../../App/Controller/';
+            $this->app_path = "../../../App";
+            $this->controllerPath = "Controller";
+            $this->viewPath = "View";
+            $this->modelPath = "Model";
+        }
+             
+        function init(){    
+//            $app_path = "../App";
+//            $controllerPath = "../App/Controller";
+//            $viewPath = "../App/Controller";
+//            $modelPath = "../App/Controller";
+            
+            $controller = isset($_GET["data"])?$_GET["data"]:NULL;
+            if($controller!==NULL){
+                echo "<br>Data nhan duoc: ".$controller."<br/>";
+                if (!file_exists("$this->app_path/$this->controllerPath/$controller.php")) {
+                    require ("$this->app_path/$this->controllerPath/404.php");
+                    return;
+                } 
+                require ("$this->app_path/$this->controllerPath/$controller.php");
+                
+                if (!class_exists($controller)) {
+                    require ("$this->app_path/$this->controllerPath/404.php");
+                    return;
+                } 
+                
+                $data = new $controller;
+                $action = isset($_GET["action"])?$_GET["action"]:"index";
+                if (method_exists($data, $action)) {
+                    $data->$action();
+                }
+            }
+        } 
+    }
