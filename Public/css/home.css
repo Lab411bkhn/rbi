@@ -1,21 +1,31 @@
 
 *{margin: 0px; padding: 0px;}
 li {list-style: none;}
-.main_menu>ul>li a {text-decoration: none; color: #FFF; font-size: 18px;}
+.header {width: 100%; height: 100px; background-image: url(../images/banner.jpg); background-size: inherit;}
+.main_menu>ul>li>a {text-decoration: none; color: #FFF; font-size: 20px;}
 .clear {clear: both;}
-.wrapper{width: 1200px; height: 500px; background: #F8F8F8; margin: 0px auto;}
-.main_menu {background: #00A69B; margin-top: 30px; padding-left: 220px; }
+.wrapper{width: 100%; height: auto; background: #F8F8F8; margin: 0px auto;}
+.main_menu {background: #00A69B; padding-left: 250px; }
 .main_menu>ul>li {float: left; padding: 12px 50px;position: relative; border-right: 1px dotted #ACACAC; }
 .main_menu>ul>li:last-child {border-right: none;}
 .main_menu>ul>li ul{display: none;position: absolute;background: #00A69B;top: 41px; width: 198px; left: 0px;}
-.main_menu>ul>li:hover ul{display: block;}
+.main_menu>ul>li:hover ul{display: block; }
 .main_menu>ul li:hover {background: #5F5C5C; transition: all 0.15s;}
-.main_menu>ul>li>ul>li {padding: 5px 10px; border-bottom: 1px dotted #ACACAC;}
+.main_menu>ul>li>ul>li {padding: 5px 10px; border-bottom: 1px dotted #ACACAC; }
+.main_menu>ul>li>ul>li a{color: #FFF;font-size: 16px;}
 
 .left_menu{height: 500px;background: #00A69B}
 .left_menu>ul>li { background: #00A69B; float: next; padding: 8px 12px;position: relative; border-right: 1px dotted #ACACAC;}
 .left_menu>ul li:hover {background: #5F5C5C; transition: all 0.15s;}
-.left_menu>ul>li>a {color: #FFF;}
+.left_menu>ul>li>a {color: #FFF;font-size: 18px;}
 
-.main_page{height: 500px;background: #8DC26F;padding-left: 20px;}
+.main_page{height: 500px;background: #F8F8F8;padding-left: 20px;}
 
+.component_details{}
+.component_details>ul>li>a {text-decoration: none; color: #FFF; font-size: 18px;}
+.component_details {background: #8DC26F; margin-top: px; padding-left: 0px; }
+.component_details>ul>li {float: left; padding: 5px 20px;position: relative; border-right: 1px dotted #b3b3b3; }
+.component_details>ul>li:last-child {border-right: none;}
+.component_details>ul>li ul{display: none;position: absolute; background: #8DC26F    ;top: 41px; width: 198px; left: 0px;}
+.component_details>ul>li:hover ul{display: block;}
+.component_details>ul li:hover {background: #5F5C5C; transition: all 0.15s;}

@@ -10,15 +10,9 @@
             $this->modelPath = "Model";
         }
              
-        function init(){    
-//            $app_path = "../App";
-//            $controllerPath = "../App/Controller";
-//            $viewPath = "../App/Controller";
-//            $modelPath = "../App/Controller";
-            
+        function init(){                
             $controller = isset($_GET["data"])?$_GET["data"]:NULL;
             if($controller!==NULL){
-                echo "<br>Data nhan duoc: ".$controller."<br/>";
                 if (!file_exists("$this->app_path/$this->controllerPath/$controller.php")) {
                     require ("$this->app_path/$this->controllerPath/404.php");
                     return;
@@ -32,8 +26,9 @@
                 
                 $data = new $controller;
                 $action = isset($_GET["action"])?$_GET["action"]:"index";
+                $tab = isset($_GET["tab"])?$_GET["tab"]:"";
                 if (method_exists($data, $action)) {
-                    $data->$action();
+                    $data->$action($tab);
                 }
             }
         } 

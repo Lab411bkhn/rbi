@@ -3,7 +3,6 @@
 class home {
     //put your code here
     function __construct() {
-        echo "Home constructor!!!";
     }
     
     function index(){
@@ -24,5 +23,25 @@ class home {
     function newComponent(){
         //require '../App/View/home/newEquipment.php';
         require '../../View/home/newComponent.php';
+    }
+    function detailComponent($tab){
+        //require '../App/View/home/newEquipment.php';
+        require '../../View/details/component_details.php';
+        if($tab === 'dfs'){ /*Damage Factors Selection*/
+            require '../../View/details/DamageFactorsSelect.php';
+        }
+        elseif ($tab === 'dfp') {/*Damage Factors Properties*/
+            require '../../View/details/DamageFactorProperties.php';
+        }
+        elseif ($tab === 'cp') {/*Consequence Properties*/
+            require '../../View/details/ConsequencePropertise.php';
+        }
+        elseif ($tab === 'result') {
+            
+        }
+        else {/*General Properties*/
+            require '../../View/details/Generalpproperties.php';
+        }
+        
     }
 }

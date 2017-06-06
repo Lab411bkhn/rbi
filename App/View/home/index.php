@@ -2,12 +2,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <h1>Demo Weatherford</h1>
-    <h2>Lab 411</h2>  
+        <title>RBI Lab 411</title>
+    </head>  
     <body>
         <div class="wrapper">
+            <div class="header">
+                
+            </div>
             <?php
             require '../main_menu.php';
             //require './bootstrap.php';
