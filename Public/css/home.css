@@ -5,7 +5,7 @@ li {list-style: none;}
 .main_menu>ul>li>a {text-decoration: none; color: #FFF; font-size: 20px;}
 .clear {clear: both;}
 .wrapper{width: 100%; height: auto; background: #F8F8F8; margin: 0px auto;}
-.main_menu {background: #00A69B; padding-left: 250px; }
+.main_menu {background: #00A69B; padding-left: 300px; }
 .main_menu>ul>li {float: left; padding: 12px 50px;position: relative; border-right: 1px dotted #ACACAC; }
 .main_menu>ul>li:last-child {border-right: none;}
 .main_menu>ul>li ul{display: none;position: absolute;background: #00A69B;top: 41px; width: 198px; left: 0px;}
@@ -23,7 +23,7 @@ li {list-style: none;}
 
 .component_details{}
 .component_details>ul>li>a {text-decoration: none; color: #FFF; font-size: 18px;}
-.component_details {background: #8DC26F; margin-top: px; padding-left: 0px; }
+.component_details {background: indigo; margin-top: 5px; padding-left: 0px; }
 .component_details>ul>li {float: left; padding: 5px 20px;position: relative; border-right: 1px dotted #b3b3b3; }
 .component_details>ul>li:last-child {border-right: none;}
 .component_details>ul>li ul{display: none;position: absolute; background: #8DC26F    ;top: 41px; width: 198px; left: 0px;}

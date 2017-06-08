@@ -19,6 +19,7 @@ class home {
     function newEquipment(){
         //require '../App/View/home/newEquipment.php';
         require '../../View/home/newEquipment.php';
+        
     }
     function newComponent(){
         //require '../App/View/home/newEquipment.php';

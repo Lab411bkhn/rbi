@@ -1,101 +1,113 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-/*$con = mysqli_connect("localhost","root","","rbi");
-echo "Connect Successful";
-
-// Check connection
-if (mysqli_connect_errno())
-{
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-}*/
-
-class database{
-    var $_dbh = 'localhost';
-    var $_sql = 'root';
-    var $_cursor = NULL;        
-    
-    public function database() 
-    {
-        try
-        {
-            $this->_dbh = new PDO('mysql:host=localhost; dbname=rbi','root','');
-            //$this->_dbh->query('set names "utf8"');
-        }
-        catch(PDOException $ex)
-        {
-            echo $ex->getMessage();
-            die(); 
+class database {
+    private $__conn;
+    function __construct() {
+        
+    }
+    // Hàm Kết Nối
+    function connect(){
+        // do some thing
+        if (!$this->__conn){
+            // Kết nối
+            $this->__conn = mysqli_connect('localhost', 'root', '', 'rbi') or die ('Lỗi kết nối');
+            // Xử lý truy vấn UTF8 để tránh lỗi font
+            mysqli_query($this->__conn, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
         }
     }
-    
-    public function setQuery($sql) {
-        $this->_sql = $sql;
+     
+    // Hàm Ngắt Kết Nối
+    function dis_connect(){
+        // do some thing
+        // Nếu đang kết nối thì ngắt
+        if ($this->__conn){
+            mysqli_close($this->__conn);
+        }
+    }
+     
+    // Hàm Insert
+    function insert($table, $data){
+        // do some thing
+        $this->connect();
+        // Lưu trữ danh sách field
+        $field_list = '';
+        // Lưu trữ danh sách giá trị tương ứng với field
+        $value_list = '';
+        // Lặp qua data
+        foreach ($data as $key => $value){
+            $field_list .= ",$key";
+            $value_list .= ",'".mysql_escape_string($value)."'";
+        }
+        // Vì sau vòng lặp các biến $field_list và $value_list sẽ thừa một dấu , nên ta sẽ dùng hàm trim để xóa đi
+        $sql = 'INSERT INTO '.$table. '('.trim($field_list, ',').') VALUES ('.trim($value_list, ',').')';
+        return mysqli_query($this->__conn, $sql);
+    }
+     
+    // Hàm Update
+    function update($table, $data, $where){
+        $this->connect();
+        $sql = '';
+        // Lặp qua data
+        foreach ($data as $key => $value){
+            $sql .= "$key = '".mysql_escape_string($value)."',";
+        }
+        // Vì sau vòng lặp biến $sql sẽ thừa một dấu , nên ta sẽ dùng hàm trim để xóa đi
+        $sql = 'UPDATE '.$table. ' SET '.trim($sql, ',').' WHERE '.$where;
+        return mysqli_query($this->__conn, $sql);
+    }
+     
+    // Hàm delete
+    function remove($table, $where){
+        $this->connect();
+        // Delete
+        $sql = "DELETE FROM $table WHERE $where";
+        return mysqli_query($this->__conn, $sql);
+    }
+     
+    // Hàm lấy danh sách
+    function get_list($table, $select){
+        $this->connect();
+        $sql = "SELECT $select FROM $table";
+        $result = mysqli_query($this->__conn, $sql);
+        if (!$result){
+            die ('Câu truy vấn bị sai');
+        }
+        $return = array();
+        // Lặp qua kết quả để đưa vào mảng
+        while ($row = mysqli_fetch_array($result)){
+            $return[] = $row;
+        }
+        // Xóa kết quả khỏi bộ nhớ
+        mysqli_free_result($result);
+        return $return;
     }
     
-    //Function execute the query 
-//    public function execute($options=array()) 
-//    {
-//        $this->_cursor = $this->_dbh->prepare($this->_sql);
-//        if($options) {  //If have $options then system will be tranmission parameters
-//            for($i=0;$i<count($options);$i++) {
-//                $this->_cursor->bindParam($i+1,$options[$i]);
-//            }
-//        }
-//        $this->_cursor->execute();
-//        return $this->_cursor;
-//    }
-//    
-//    //Funtion load datas on table
-//    public function loadAllRows($options=array()) {
-//        if(!$options) {
-//            if(!$result = $this->execute())
-//                return false;
-//        }
-//        else {
-//            if(!$result = $this->execute($options))
-//                return false;
-//        }
-//        return $result->fetchAll(PDO::FETCH_OBJ);
-//    }
-//    
-//    //Funtion load 1 data on the table
-//    public function loadRow($option=array()) {
-//        if(!$option) {
-//            if(!$result = $this->execute())
-//                return false;
-//        }
-//        else {
-//            if(!$result = $this->execute($option))
-//                return false;
-//        }
-//        return $result->fetch(PDO::FETCH_OBJ);
-//    }
-//    
-//    //Function count the record on the table
-//    public function loadRecord($option=array()) {
-//        if(!$option) {
-//            if(!$result = $this->execute())
-//                return false;
-//        }
-//        else {
-//            if(!$result = $this->execute($option))
-//                return false;
-//        }
-//        return $result->fetch(PDO::FETCH_COLUMN);
-//    }
-    
-    public function getLastId() {
-        return $this->_dbh->lastInsertId();
+    // Hàm lấy 1 record dùng trong trường hợp lấy chi tiết tin
+    function get_row($table, $select, $where){
+        $this->connect();
+        $sql = "SELECT $select FROM $table WHERE $where";
+        $result = mysqli_query($this->__conn, $sql);
+        if (!$result){
+            die ('Câu truy vấn bị sai');
+        }
+        $row = mysqli_fetch_array($result);
+        // Xóa kết quả khỏi bộ nhớ
+        mysqli_free_result($result);
+        if ($row){
+            return $row;
+        }
+        return false;
     }
     
-    public function disconnect() {
-        $this->_dbh = NULL;
+    function demo(){
+        $this->connect();
+        $sql = "SELECT * FROM user WHERE username='trantam99'";
+        $result = mysqli_query($this->__conn, $sql);
+        $row = mysqli_fetch_array($result);
+        echo $row['info'];
     }
 }
 
-$da = new database();
+//$demo = new database();
+////$row = $demo->get_row('user', '*', "username='haiduong'");
+//$row = $demo->get_list('user', '*');
+//echo $row[1]['info'];
