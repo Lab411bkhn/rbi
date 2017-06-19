@@ -81,23 +81,6 @@ class database {
         return $return;
     }
     
-    function get_list_assoc($table, $select){
-        $this->connect();
-        $sql = "SELECT $select FROM $table";
-        $result = mysqli_query($this->__conn, $sql);
-        if (!$result){
-            die ('Câu truy vấn bị sai');
-        }
-        $return = array();
-        // Lặp qua kết quả để đưa vào mảng
-        while ($row = mysqli_fetch_assoc($result)){
-            $return[] = $row;
-        }
-        // Xóa kết quả khỏi bộ nhớ
-        mysqli_free_result($result);
-        return $return;
-    }
-    
     // Hàm lấy 1 record dùng trong trường hợp lấy chi tiết tin
     function get_row($table, $select, $where){
         $this->connect();
@@ -124,15 +107,11 @@ class database {
     }
 }
 
-//$demo = new database();
-//////$row = $demo->get_row('user', '*', "username='haiduong'");
-//$data = array(
-//    'username' => "demow1",
-//    'password' => "q222"      
-//);
-//$row = $demo->insert('user', $data);
-//foreach ($data as $key => $value) {
-//    echo $value;
-//    
-//}
-////echo $row[1]['info'];
+$demo = new database();
+////$row = $demo->get_row('user', '*', "username='haiduong'");
+$data[] = array(
+    'username' => 'demo',
+    'password' => '22'      
+);
+$row = $demo->insert('user', $data);
+//echo $row[1]['info'];

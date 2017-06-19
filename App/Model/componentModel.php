@@ -5,17 +5,17 @@
  * @author Dương
  */
 require_once 'database.php';
-class equipmentModel extends database{
+class componentModel extends database{
     //put your code here
     function __construct() {
         
     }
     
-    function setEquipment($eq) {
+    function setComponent($eq) {
         //$this->userName = $userName;
     }
     
-    public function getAllEquipmentUnitCode() {
-        return $this->get_list('tbl_equipmentforrbi',"UnitCode");
+    public function getAllComponent() {
+        return $this->get_list("tbl_component","componentName");
     }
 }

@@ -1,8 +1,9 @@
 <link rel="stylesheet" href="../../../Public/css/home.css">
 <div class="main_menu">   
     <ul>
-            <li><a href="index.php?data=home&left=equipment_left">Home</a>
+            <li><a href="index.php?data=home&left=home_left">Home</a>
                 <ul>
+                    <li><a href="index.php?data=home&action=newEquipmentUnit&left=equipment_left">Create New Equipments for RBI Implement</a></li>
                     <li><a href="index.php?data=home&action=newEquipment&left=equipment_left">Create New Equipment</a></li>
                     <li><a href="index.php?data=home&action=newComponent&left=equipment_left">Create New Component</a></li>
                     <li><a href="#">View Recommended Proposals</a></li>

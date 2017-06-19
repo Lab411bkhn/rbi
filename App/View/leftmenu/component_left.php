@@ -1,9 +1,14 @@
+<?php
+    //require_once '../../Model/componentModel.php.php';
+    require_once '../../Model/componentModel.php';
+    $cpn = new componentModel();
+    $cpnName = $cpn->getAllComponent();
+?>
 <ul>
-    <li><a href="index.php?data=home&action=detailComponent&left=component_left">Sites</a></li>
-    <li><a href="index.php?data=home&action=detailComponent&left=component_left">Facilities</a></li>
-    <li><a href="#">Manufactures</a></li>
-    <li><a href="#">Design Codes</a></li>
-    <li><a href="#">Generic Fluids</a></li>
-    <li><a href="#">Generic Materials</a></li>
+    <?php
+        foreach ($cpnName as $value) {
+            echo "<li><a href='index.php?data=home&action=detailComponent&left=component_left'>".$value[0]."</a></li>";
+        }
+    ?>
 </ul>
 

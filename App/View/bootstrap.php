@@ -11,7 +11,7 @@
         }
              
         function init(){                
-            $controller = isset($_GET["data"])?$_GET["data"]:NULL;
+            $controller = isset($_GET["data"])?$_GET["data"]:"home";
             if($controller!==NULL){
                 if (!file_exists("$this->app_path/$this->controllerPath/$controller.php")) {
                     require ("$this->app_path/$this->controllerPath/404.php");
@@ -26,9 +26,9 @@
                 
                 $data = new $controller;
                 $action = isset($_GET["action"])?$_GET["action"]:"index";
-                $tab = isset($_GET["tab"])?$_GET["tab"]:"";
+                $param = isset($_GET["param"])?$_GET["param"]:"";
                 if (method_exists($data, $action)) {
-                    $data->$action($tab);
+                    $data->$action($param);
                 }
             }
         } 

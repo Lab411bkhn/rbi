@@ -1,23 +1,22 @@
-
 *{margin: 0px; padding: 0px;}
 li {list-style: none;}
 .header {width: 100%; height: 100px; background-image: url(../images/banner.jpg); background-size: inherit;}
-.main_menu>ul>li>a {text-decoration: none; color: #FFF; font-size: 20px;}
+.main_menu>ul>li>a {text-decoration: none; color: #FFF; font-size: 16px;}
 .clear {clear: both;}
 .wrapper{width: 100%; height: auto; background: #F8F8F8; margin: 0px auto;}
-.main_menu {background: #00A69B; padding-left: 300px; }
+.main_menu {background: #0078a3; padding-left: 300px; }
 .main_menu>ul>li {float: left; padding: 12px 50px;position: relative; border-right: 1px dotted #ACACAC; }
 .main_menu>ul>li:last-child {border-right: none;}
-.main_menu>ul>li ul{display: none;position: absolute;background: #00A69B;top: 41px; width: 198px; left: 0px;}
+.main_menu>ul>li ul{display: none;position: absolute;background: #0078a3;top: 41px; width: 198px; left: 0px;}
 .main_menu>ul>li:hover ul{display: block; }
 .main_menu>ul li:hover {background: #5F5C5C; transition: all 0.15s;}
 .main_menu>ul>li>ul>li {padding: 5px 10px; border-bottom: 1px dotted #ACACAC; }
-.main_menu>ul>li>ul>li a{color: #FFF;font-size: 16px;}
+.main_menu>ul>li>ul>li a{color: #FFF;font-size: 15px;}
 
 .left_menu{height: 500px;background: #00A69B}
 .left_menu>ul>li { background: #00A69B; float: next; padding: 8px 12px;position: relative; border-right: 1px dotted #ACACAC;}
 .left_menu>ul li:hover {background: #5F5C5C; transition: all 0.15s;}
-.left_menu>ul>li>a {color: #FFF;font-size: 18px;}
+.left_menu>ul>li>a {color: #FFF;font-size: 15px;}
 
 .main_page{height: 500px;background: #F8F8F8;padding-left: 20px;}
 
@@ -29,3 +28,52 @@ li {list-style: none;}
 .component_details>ul>li ul{display: none;position: absolute; background: #8DC26F    ;top: 41px; width: 198px; left: 0px;}
 .component_details>ul>li:hover ul{display: block;}
 .component_details>ul li:hover {background: #5F5C5C; transition: all 0.15s;}
+
+body, input, textarea {
+    font-family: Arial;
+    font-size: 12px;
+}
+.button {
+    background-color: lavender;
+    text-align: center;
+    padding: 2px;
+    white-space: nowrap;
+}
+table {
+    border: 2px ridge #000;
+    padding: 1px 3px;
+}
+
+#searchInput {
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* Full-width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+
+.listTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+.listTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+.listTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+.listTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+

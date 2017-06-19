@@ -16,7 +16,7 @@ class leftmenuController {
     }
     
     function init(){
-        $left_menu = isset($_GET["left"])?$_GET["left"]:NULL;
+        $left_menu = isset($_GET["left"])?$_GET["left"]:"home_left";
         if($left_menu!==NULL){
             if (!file_exists("$this->app_path/$this->viewPath/$this->leftmenu/$left_menu.php")) {
                 require ("$this->app_path/$this->controllerPath/404.php");

@@ -16,10 +16,12 @@ class home {
         echo "Home Action";
     }
     
+    function newEquipmentUnit(){
+        require '../../View/home/newEquipmentUnit.php';
+    }
+            
     function newEquipment(){
-        //require '../App/View/home/newEquipment.php';
-        require '../../View/home/newEquipment.php';
-        
+        require '../../View/home/newEquipment.php';        
     }
     function newComponent(){
         //require '../App/View/home/newEquipment.php';
@@ -31,18 +33,40 @@ class home {
         if($tab === 'dfs'){ /*Damage Factors Selection*/
             require '../../View/details/DamageFactorsSelect.php';
         }
-        elseif ($tab === 'dfp') {/*Damage Factors Properties*/
+        else if ($tab === 'dfp') {/*Damage Factors Properties*/
             require '../../View/details/DamageFactorProperties.php';
         }
-        elseif ($tab === 'cp') {/*Consequence Properties*/
+        else if ($tab === 'cp') {/*Consequence Properties*/
             require '../../View/details/ConsequencePropertise.php';
         }
-        elseif ($tab === 'result') {
+        else if ($tab === 'result') {
             
         }
         else {/*General Properties*/
             require '../../View/details/Generalpproperties.php';
-        }
-        
+        }        
+    }
+    
+    function createFormAddDetailEquipment($item){
+        require '../../View/details/inputParameter.php';
+        $inputParam = new inputParameter($item);
+        $inputParam->creatForm();
+    }
+    
+    function addDetailEquipment($item){
+        require '../../Model/details/inputParameterModel.php';
+        $inputParam = new inputParameterModel();
+    }
+    
+    function listEquipmentUnit(){
+        require '../../View/home/equipmentUnitList.php';
+    }
+    
+    function listEquipment(){
+        require '../../View/home/equipmentList.php';
+    }
+    
+    function listComponent(){
+        require '../../View/home/equipmentList.php';
     }
 }

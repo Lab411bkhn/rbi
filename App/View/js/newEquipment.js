@@ -3,35 +3,33 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-function addDesignCode(){
-    var retVal = prompt("Enter Design code: ", "Design code here");
-//    window.location("http://www.google.com");
-       
-}
-
-$(document).ready(function() {
+$(document).ready(function() {    
+//    $(function() {
+//        $("#inputDsCode").dialog({
+//            autoOpen: false
+//        });
+//        $("#inputSite").dialog({
+//            autoOpen: false
+//        });
+//        $("#inputFacility").dialog({
+//            autoOpen: false
+//        });
+//        $("#inputManu").dialog({
+//            autoOpen: false
+//        });
+//    }); 
+    
 //    $("#btnAddDesignCode").on("click", function() {
-//        var retVal = prompt("Enter Design code: ", "Design code here");; 
+//            $("#inputDsCode").dialog("open");
+//        });
+//    $("#btnAddSite").on("click", function() {
+//        $("#inputSite").dialog("open");
 //    });
-    $("#btnAddDesignCode").click(function() {
-        var retVal = prompt("Enter Design code: ", "Design code here");; 
-    });
+//    $("#btnAddFacility").on("click", function() {
+//        $("#inputFacility").dialog("open");
+//    });
+//    $("#btnAddManufacturer").on("click", function() {
+//        $("#inputManu").dialog("open");
+//    });
 }); 
 
-
-function addSite(){
-    var retVal = prompt("Enter Site : ", "here");
-    window.location("index.php?data=home&action=newEquipment&left=equipment_left"); 
-}
-
-function addManufacturer(){
-    var retVal = prompt("Enter Manufacturer : ", "here");
-    window.location.replace("index.php?data=home&action=newEquipment&left=equipment_left");
-    //document.write("You have entered : " + retVal); 
-}
-
-function addFacility(){
-    var retVal = prompt("Enter Facility : ", "here");
-    window.location.replace("index.php?data=home&action=newEquipment&left=equipment_left"); 
-}

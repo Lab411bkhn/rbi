@@ -1,79 +1,56 @@
 <link rel="stylesheet" href="../../../../Public/css/home.css">
 <div>
-    <form action="#">
+    <form action="#" onsubmit="return validateForm()" name="newComponent">
     <fieldset>
         <legend>Create new Component:</legend>
-        <table class="newComponent">
+        <table class="newComponentTable">
             <tr>
-                <td><strong>Select Existing Component: </strong></td>
-                <td><input type="text" name="cpnId" value="null"></td>
+                <td width="50%"><strong>Select Existing Component: </strong></td>
+                <td><input type="text" name="cpnId"></td>
             </tr>
             <tr>
-                <td>Equipment Number:</td><td><input type="number" name="eqNumber" value=""></td>
+                <td>Component Name:</td><td><input type="text" name="cpnName"></td>
             </tr>
             <tr>
-                <td>Equipment Type:</td>
-                <td><input list="eqType" name="eqType">
-                <datalist id="eqType">
-                    <option value="Air Cooler">
-                    <option value="Filter">
-                    <option value="Pump">
-                    <option value="Tank">
-                    <option value="Tower">
-                </datalist> 
-                </td>
+                <td>Component Description:</td><td><input type="text" name="cpnDescription" value=""></td>
             </tr>
             <tr>
-                <td>Design Code:</td><td><input type="text" name="cpnDesignCode" value=""></td>
+                <td>MOC:</td><td><input type="text" name="cpnMOC" value=""></td>
             </tr>
             <tr>
-                <td>Site:</td><td><input type="text" name="cpnSite" value=""></td>
+                <td>LinearMOC:</td><td><input type="text" name="cpnLinearMOC" value=""></td>
             </tr>
             <tr>
-                <td>Facility:</td><td><input type="text" name="cpnFacility" value=""></td>
+                <td>Height Length:</td><td><input type="number" name="cpnHeightLength" value=""></td>
+            </tr>            
+            <tr>
+                <td>Diameter:</td><td><input type="text" name="cpnDiameter" value=""></td>
             </tr>
             <tr>
-                <td>Component Number:</td><td><input type="number" name="cpnNumber" value=""></td>
+                <td>Nominal Thickness:</td><td><input type="text" name="cpnNominalThickness" value=""></td>
             </tr>
             <tr>
-            <td>Component Type:</td><td>
-                <input list="cpmType" name="cpmType">
-                <datalist id="cpmType">
-                    <option value="Bend/Elbow">
-                    <option value="Fixed Roof">
-                    <option value="Floating Roof">
-                    <option value="Nozzle">
-                    <option value="Shell">
-                </datalist> 
-            </td>
-            </tr> 
-            <tr>
-                <td>API Component Type:</td>
-                <td>
-                    <input list="cpmType" name="cpmType">
-                    <datalist id="cpmType">
-                        <option value="COURSE-1">
-                        <option value="COURSE-2">
-                        <option value="COURSE-3">
-                        <option value="PIPE-1">
-                        <option value="PIPE-2">
-                    </datalist> 
-                </td>
+                <td>CA:</td><td><input type="text" name="cpnCA" value=""></td>
             </tr>
             <tr>
-                <td>Component Name:</td><td><input type="number" name="cpnName" value=""></td>
-            </tr>
-            
-            <tr>
-            <td>Component Risk Links to Equipment Risk:</td><td><input type="checkbox" name="cpnRiskLink" value=""></td>
-            </tr> 
-            <tr>
-                <td>Description:</td><td><input type="text" name="eqDescription" value=""></td>
+                <td>Design Pressure:</td><td><input type="text" name="cpnDesignPressure" value=""></td>
             </tr>
             <tr>
-                <td></td><td><input type="submit" value="Submit"></td>
+                <td>Design Temp:</td><td><input type="text" name="cpnDesignTemp" value=""></td>
             </tr>
-        </table>
+            <tr>
+                <td></td><td><input type="submit" value="Create New Component" class="button"></td>
+            </tr>
+        </table> 
     </fieldset>
   </form>
 </div>
+<script>
+    function validateForm() {
+        var x = document.forms["newComponent"]["cpnId"].value;
+        if (x == "") {
+            alert("Equipment code must be filled out");
+            return false;
+        }
+    }
+</script>
