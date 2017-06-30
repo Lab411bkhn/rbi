@@ -1,19 +1,16 @@
 <?php
 require_once '../../Model/database.php';
-class equipmentUnitListModel extends database{
-    //put your code here
+class equipmentTempListModel extends database{
     function __construct() {
-        
     }
-    
-    //Lay tat ca cac gia trij trong CSDL
+    //put your code here
     function getAllEquipmentUnit(){
-        return $this->get_list_assoc('tbl_equipmentforrbi', '*');        
+        return $this->get_list_assoc('tbl_equipmenttemp', '*');        
     }
     
     //lay ten cac cot trong CSDL
     function getAllPrameters(){
-        $arr = $this->get_list_assoc('tbl_equipmentforrbi', '*');
+        $arr = $this->get_list_assoc('tbl_equipmenttemp', '*');
         $outParams = array();
         $ti = "";
         if(count($arr)>0){
@@ -24,9 +21,3 @@ class equipmentUnitListModel extends database{
         return $outParams;
     }
 }
-
-//$demo = new equipmentUnitListModel();
-//$arr = $demo->getAllPrameters();
-//foreach ($arr as $key => $value) {
-//    echo $value."|";
-//}

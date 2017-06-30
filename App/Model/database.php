@@ -60,7 +60,8 @@ class database {
         $this->connect();
         // Delete
         $sql = "DELETE FROM $table WHERE $where";
-        return mysqli_query($this->__conn, $sql);
+        $res = mysqli_query($this->__conn, $sql);
+        return $res;
     }
      
     // Hàm lấy danh sách
@@ -78,6 +79,7 @@ class database {
         }
         // Xóa kết quả khỏi bộ nhớ
         mysqli_free_result($result);
+        $this->dis_connect();
         return $return;
     }
     

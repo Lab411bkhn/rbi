@@ -10,7 +10,6 @@ $val = $equList->getAllEquipmentUnit();
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 <script type="text/javascript" src="../js/tableItem.js"></script>
 <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for names..">
-<button onclick="deleteItem()">DEMO</button>
 <table border="1" class="listTable" id="listTable">
     <tr>
         <?php
@@ -25,7 +24,7 @@ $val = $equList->getAllEquipmentUnit();
             foreach ($value as $key => $va) {
                 echo "<td>$va</td>";
             }
-            echo "<td><input type='checkbox' name='checkBox' onchange='checkBoxChangeHandler()'></td>";
+            echo "<td><input type='checkbox' class='checkBoxClass' onchange='checkBoxChangeHandler()'></td>";
             echo "</tr>";
         }
     ?>
@@ -36,8 +35,8 @@ $val = $equList->getAllEquipmentUnit();
 <form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentUnitController.php">
     <div class="form-group">
         <label for="exampleInputFile">File Upload</label>
-        <input type="file" name="file" id="file" size="150px">
-        <p class="help-block">Only Excel/CSV File Import.</p>
+        <input type="file" name="file" id="file">
+        <p class="help-block">Only .xls File Import.</p>
     </div>
     <button type="submit" class="btn btn-default" name="Import" value="Import">Upload</button>
 </form>

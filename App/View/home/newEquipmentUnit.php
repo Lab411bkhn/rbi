@@ -1,8 +1,3 @@
-<?php
-    require_once '../../Model/user.php';
-    $user = new user();
-    $us = $user->getUserAll();
-?>
 <head>
     <link rel="stylesheet" href="../../../../Public/css/home.css">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
@@ -37,5 +32,6 @@
             return false;
         }
     }
+    
 </script>
 </body>

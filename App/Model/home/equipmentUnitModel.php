@@ -26,4 +26,18 @@ class equipmentUnitModel extends database{
         );
         $this->insert('tbl_equipmentforrbi', $data);
     }
+    
+    function deleteEquipmentUnit($unitCode){
+        foreach ($unitCode as $value) {
+            $this->remove('tbl_equipmentforrbi', 'UnitCode='.$value);            
+        }
+    }
+    
+    public function getAllEquipmentUnitCode() {
+        return $this->get_list('tbl_equipmentforrbi',"UnitCode");
+    }
 }
+
+$demo = new equipmentUnitModel();
+$data = array('06');
+$demo->deleteEquipmentUnit($data);

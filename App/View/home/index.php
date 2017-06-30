@@ -14,8 +14,9 @@
             //require './bootstrap.php';
             ?>
             <div>
-                <table width="100%">
-                    <td width="18%" >
+                <table>
+                    <tr>
+                    <td width="250px" >
                         <div class="left_menu">
                         <?php
                         require '../../Controller/leftmenuController.php';
@@ -24,7 +25,7 @@
                         ?>
                         </div>
                     </td>
-                    <td width="82%">  
+                    <td width="750px">  
                         <div class="main_page">
                             <?php
                             require '../bootstrap.php';
@@ -33,6 +34,7 @@
                             ?>                            
                         </div>
                     </td>
+                </tr>
                 </table>
             </div>
         </div>

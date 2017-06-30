@@ -6,10 +6,7 @@ class home {
     }
     
     function index(){
-        echo "<h3>Index Action!!!</h3>";
-        //require '../../View/home/newEquipment.php';
-        //require '../App/View/home/index.php';        
-        //header("Location: ../App/View/home/index.php");
+        require '../../View/home/about.php';
     }
            
     function act(){
@@ -23,10 +20,17 @@ class home {
     function newEquipment(){
         require '../../View/home/newEquipment.php';        
     }
+    
     function newComponent(){
         //require '../App/View/home/newEquipment.php';
         require '../../View/home/newComponent.php';
     }
+    
+    function newPlant(){
+        //require '../App/View/home/newEquipment.php';
+        require '../../View/home/newPlant.php';
+    }
+    
     function detailComponent($tab){
         //require '../App/View/home/newEquipment.php';
         require '../../View/details/component_details.php';
@@ -67,6 +71,9 @@ class home {
     }
     
     function listComponent(){
-        require '../../View/home/equipmentList.php';
+        require '../../View/home/componentList.php';
+    }
+    function listEquipmentTemp(){
+        require '../../View/home/equipmentTempList.php';
     }
 }

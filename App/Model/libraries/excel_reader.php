@@ -444,6 +444,7 @@ class PhpExcelReader {
                         }else{
                             $isdate = FALSE;
                             if ($indexCode > 0){
+                                $formatstr = "";
                                 if (isset($this->formatRecords[$indexCode]))
                                     $formatstr = $this->formatRecords[$indexCode];
                                 if ($formatstr)

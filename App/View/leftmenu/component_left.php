@@ -1,6 +1,6 @@
 <?php
     //require_once '../../Model/componentModel.php.php';
-    require_once '../../Model/componentModel.php';
+    require_once '../../Model/home/componentModel.php';
     $cpn = new componentModel();
     $cpnName = $cpn->getAllComponent();
 ?>

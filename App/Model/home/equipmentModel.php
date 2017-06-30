@@ -1,26 +1,33 @@
 <?php
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/**
- * Description of equipmentModel
- *
- * @author Dương
- */
-class equipmentModel {
+require_once '../../Model/database.php';
+class equipmentModel extends database {
     //put your code here
-    function __construct() {
-        
+    function __construct() {        
+    }
+    
+    function getAllEquipment() {
+        return $this->get_list_assoc('tbl_equipmentlist','*');
     }
     
     function insertEquipment($data){
-        $this->insert('tbl_equipmentforrbi', $data);
+        $this->insert('tbl_equipmentlist', $data);
+        //print_r($data);
     }
+    
     function isExist($unitCode){
         return FALSE;
     }
+    
+    function deleteEquipment($itemNo){
+        foreach ($itemNo as $val) {
+            echo $val;
+            $this->remove('tbl_equipmentlist', "`ItemNo`=".$val);            
+        }
+    }
 }
+
+$demo = new equipmentModel();
+$dat = array('C04301');
+echo $demo->deleteEquipment($dat);
+
+

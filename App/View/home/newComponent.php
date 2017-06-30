@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../../../../Public/css/home.css">
+
 <div>
     <form action="#" onsubmit="return validateForm()" name="newComponent">
     <fieldset>
@@ -9,34 +9,34 @@
                 <td><input type="text" name="cpnId"></td>
             </tr>
             <tr>
-                <td>Component Name:</td><td><input type="text" name="cpnName"></td>
+                <td>Component Name </td><td><input type="text" name="cpnName"></td>
             </tr>
             <tr>
-                <td>Component Description:</td><td><input type="text" name="cpnDescription" value=""></td>
+                <td>Component Description </td><td><input type="text" name="cpnDescription" value=""></td>
             </tr>
             <tr>
-                <td>MOC:</td><td><input type="text" name="cpnMOC" value=""></td>
+                <td>Masterial Of Construction (MOC) </td><td><input type="text" name="cpnMOC" value=""></td>
             </tr>
             <tr>
-                <td>LinearMOC:</td><td><input type="text" name="cpnLinearMOC" value=""></td>
+                <td>Linear MOC</td><td><input type="text" name="cpnLinearMOC" value=""></td>
             </tr>
             <tr>
-                <td>Height Length:</td><td><input type="number" name="cpnHeightLength" value=""></td>
+                <td>Height Length (m)</td><td><input type="number" name="cpnHeightLength" value=""></td>
             </tr>            
             <tr>
-                <td>Diameter:</td><td><input type="text" name="cpnDiameter" value=""></td>
+                <td>Diameter (m)</td><td><input type="text" name="cpnDiameter" value=""></td>
             </tr>
             <tr>
-                <td>Nominal Thickness:</td><td><input type="text" name="cpnNominalThickness" value=""></td>
+            <td><strong>Nominal Thickness (mm)</strong></td><td><input type="text" name="cpnNominalThickness" value=""></td>
             </tr>
             <tr>
-                <td>CA:</td><td><input type="text" name="cpnCA" value=""></td>
+                <td>CA (mm)</td><td><input type="text" name="cpnCA" value=""></td>
             </tr>
             <tr>
-                <td>Design Pressure:</td><td><input type="text" name="cpnDesignPressure" value=""></td>
+                <td>Design Pressure (barg)</td><td><input type="text" name="cpnDesignPressure" value=""></td>
             </tr>
             <tr>
-                <td>Design Temp:</td><td><input type="text" name="cpnDesignTemp" value=""></td>
+                <td>Design Temp (&ordm;C)</td><td><input type="text" name="cpnDesignTemp" value=""></td>
             </tr>
             <tr>
                 <td></td><td><input type="submit" value="Create New Component" class="button"></td>

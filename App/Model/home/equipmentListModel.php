@@ -14,9 +14,11 @@ class equipmentListModel extends database{
         $arr = $this->get_list_assoc('tbl_equipmentlist', '*');
         $outParams = array();
         $ti = "";
-        foreach ($arr[0] as $key => $value) {
-            array_push($outParams, $key);
-            //$ti.=$key;
+        if(count($arr)>0){
+            foreach ($arr[0] as $key => $value) {
+                array_push($outParams, $key);
+                //$ti.=$key;
+            }
         }
         return $outParams;
     }
