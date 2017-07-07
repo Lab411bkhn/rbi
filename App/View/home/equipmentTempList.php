@@ -36,7 +36,7 @@ $value = $equList->getAllEquipmentUnit();
 <div id="deleteItem" >
     <button onclick="deleteItem()">Delete Items</button>
 </div>
-<form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentUnitController.php">
+<form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentTempController.php">
     <div class="form-group">
         <label for="exampleInputFile">File Upload</label>
         <input type="file" name="file" id="file">

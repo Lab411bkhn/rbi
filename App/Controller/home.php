@@ -43,12 +43,21 @@ class home {
         else if ($tab === 'cp') {/*Consequence Properties*/
             require '../../View/details/ConsequencePropertise.php';
         }
-        else if ($tab === 'result') {
+        else if ($tab === '') {
+            //require '../../View/details/risksummary.php';
             
         }
         else {/*General Properties*/
             require '../../View/details/Generalpproperties.php';
         }        
+    }
+
+    function risksummary($param){
+        require '../../View/details/risksummary.php';
+        $cpnx = new componentModel();
+        $demo = $cpnx->getRowComponentName($param);
+        $viewNew = new risksumary($demo);
+        $viewNew->index();
     }
     
     function createFormAddDetailEquipment($item){

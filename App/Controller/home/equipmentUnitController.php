@@ -57,7 +57,7 @@ class equipmentUnitController {
             {
                 $excel->read($filename);
                 //$excel->read('test.xls');
-                $nr_sheets = count($excel->sheets);       // gets the number of sheets
+              //  $nr_sheets = count($excel->sheets);       // gets the number of sheets
                 $excel_data = '';              // to store the the html tables with data of each sheet
                 // traverses the number of sheets and sets html table with each sheet data in $excel_data
 //                for($i=0; $i<$nr_sheets; $i++) {

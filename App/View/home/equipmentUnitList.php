@@ -30,7 +30,7 @@ $val = $equList->getAllEquipmentUnit();
     ?>
 </table>
 <div id="deleteItem" >
-    <button onclick="deleteItem()">Delete Items</button>
+    <button onclick="deleteItems()">Delete Items</button>
 </div>
 <form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentUnitController.php">
     <div class="form-group">
@@ -40,4 +40,31 @@ $val = $equList->getAllEquipmentUnit();
     </div>
     <button type="submit" class="btn btn-default" name="Import" value="Import">Upload</button>
 </form>
+<script>
+   /* function deleteItem(){
+        var x = document.getElementsByClassName("checkBoxClass");
+        table = document.getElementById("listTable");
+        tr = table.getElementsByTagName("tr");
+        var items = [];
+        for (var i = 0; i < x.length; i++) {
+            if(x[i].checked) {
+                //Lay Id bat dau tu dong thu 2, bo qua ten cot
+                td = tr[i+1].getElementsByTagName("td")[0];
+                if (td) {
+                    items.push(td.innerHTML);
+                }
+            }
+        }
 
+        var dataq = JSON.stringify(items);
+
+        $.ajax({
+            url: "../../Controller/home/equipmentUnitController.php",
+            data: 'act=delete&equUnitCode=' + dataq,
+            success: function(req){
+                alert("Delete Unit Code" + dataq + " successfully! ");
+                $(location).attr('href', '../../View/home/index.php?data=home&action=listEquipmentUnit&left=home_left');
+            }
+        });
+    } */
+</script>

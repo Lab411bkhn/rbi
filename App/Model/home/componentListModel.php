@@ -9,6 +9,7 @@ class componentListModel extends database{
     function getAllComponent(){
         return $this->get_list_assoc('tbl_component', '*');        
     }
+
     
     function getAllPrameters(){
         $arr = $this->get_list_assoc('tbl_component', '*');

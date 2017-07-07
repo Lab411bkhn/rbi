@@ -1,13 +1,9 @@
-
 <div>
-    <form action="#" onsubmit="return validateForm()" name="newComponent">
+    <form action="../../../Controller/home/componentController.php" onsubmit="return validateForm()" name="newComponent">
     <fieldset>
         <legend>Create new Component:</legend>
         <table class="newComponentTable">
-            <tr>
-                <td width="50%"><strong>Select Existing Component: </strong></td>
-                <td><input type="text" name="cpnId"></td>
-            </tr>
+
             <tr>
                 <td>Component Name </td><td><input type="text" name="cpnName"></td>
             </tr>

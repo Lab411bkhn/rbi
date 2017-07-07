@@ -17,11 +17,12 @@ class equipmentModel extends database {
     function isExist($unitCode){
         return FALSE;
     }
-    
-    function deleteEquipment($itemNo){
-        foreach ($itemNo as $val) {
-            echo $val;
-            $this->remove('tbl_equipmentlist', "`ItemNo`=".$val);            
+    function deleteEquipment($eqItemNo){
+        foreach ($eqItemNo as $val) {
+           // echo $val;
+            $sql = " DELETE FROM tbl_equipment WHERE  ItemNo = '.$val.'";
+
+          //  $this->remove('tbl_equipmentlist', 'ItemNo ='.$val.'');
         }
     }
 }

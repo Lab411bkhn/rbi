@@ -3,11 +3,14 @@
     require_once '../../Model/home/componentModel.php';
     $cpn = new componentModel();
     $cpnName = $cpn->getAllComponent();
+    $cpnName_1 = $cpn->getAllComponent_name();
+
 ?>
 <ul>
     <?php
-        foreach ($cpnName as $value) {
-            echo "<li><a href='index.php?data=home&action=detailComponent&left=component_left'>".$value[0]."</a></li>";
+        foreach ($cpnName_1 as $value) {
+            $cpnnew = $value['tbl_component_componentName'];
+            echo "<li><a href='index.php?data=home&action=risksummary&param=$cpnnew&left=component_left'>".$cpnnew."</a></li>";
         }
     ?>
 </ul>

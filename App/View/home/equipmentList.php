@@ -32,7 +32,7 @@ $val = $equList->getAllEquipment();
 <div id="deleteItem" >
     <button onclick="deleteEquipment()">Delete Items</button>
 </div>
-<form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentUnitController.php">
+<form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentController.php">
     <div class="form-group">
         <label for="exampleInputFile">File Upload</label>
         <input type="file" name="file" id="file">

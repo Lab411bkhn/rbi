@@ -23,7 +23,7 @@ class equipmentController {
                 $eqItemNoStr = isset($_GET["eqItemNo"])?$_GET["eqItemNo"]:NULL;
                 $eqItemNo = json_decode($eqItemNoStr);
                 $this->equ->deleteEquipment($eqItemNo);
-                //echo "DUONG DELETE".$eqItemNoStr;
+               // echo "DUONG DELETE".$eqItemNoStr;
             }
         }
         else {
