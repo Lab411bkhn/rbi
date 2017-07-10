@@ -93,6 +93,15 @@ class database
         return $ret;
         // }
     }
+    function removecpn($where)
+    {
+        $this->connect();
+        // Delete
+        $sql = "DELETE FROM tbl_component WHERE componentName ='".$where."'";
+        $ret = mysqli_query($this->__conn, $sql) or die(mysqli_error($this->__conn));
+        return $ret;
+        // }
+    }
 
 // Hàm lấy danh sách
         function get_list($table, $select)

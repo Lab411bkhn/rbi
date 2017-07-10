@@ -53,6 +53,7 @@ function searchFunction_cpn() {
     }
 }*/
 function checkBoxChangeHandler(){
+    alert("DEMO");
     var x = document.getElementsByClassName("checkBoxClass");
     var y = document.getElementById('deleteItem');     
     for (var i = 0; i < x.length; i++) {
@@ -161,7 +162,7 @@ function deleteEquipment(){
 
 function deleteComponent(){
     alert("DEMO");
-    var x = document.getElementsByClassName("checkBoxComponent");
+    var x = document.getElementsByClassName("checkBoxClass");
     table = document.getElementById("listTable");
     tr = table.getElementsByTagName("tr");
     var items = [];
@@ -187,7 +188,7 @@ function deleteComponent(){
     });
 }
 function deleteEqipmentTem(){
-    alert("DEMO");
+    //alert("DEMO");
     var x = document.getElementsByClassName("checkBoxClass");
     table = document.getElementById("listTable");
     tr = table.getElementsByTagName("tr");

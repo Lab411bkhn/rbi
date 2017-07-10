@@ -15,6 +15,11 @@ class componentModel extends database{
         $this->insert('tbl_component',$data);
 
     }
+    function deleteComponent($Name){
+        foreach($Name as $val){
+            $this->removecpn($val);
+        }
+    }
     function  getAllComponent_name(){
         return $this->get_list_assoc('tbl_risksummary','tbl_component_componentName');
     }

@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0161a48-3e0d-4f4a-a28a-b34d4754910f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Controller/home/equipmentUnitSubmit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/View/home/test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controller/home/componentController.php" afterPath="$PROJECT_DIR$/App/Controller/home/componentController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/home/componentList.php" afterPath="$PROJECT_DIR$/App/View/home/componentList.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Model/home/componentModel.php" afterPath="$PROJECT_DIR$/App/Model/home/componentModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Model/database.php" afterPath="$PROJECT_DIR$/App/Model/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controller/home/equipmentController.php" afterPath="$PROJECT_DIR$/App/Controller/home/equipmentController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Model/home/equipmentModel.php" afterPath="$PROJECT_DIR$/App/Model/home/equipmentModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controller/home/equipmentTempController.php" afterPath="$PROJECT_DIR$/App/Controller/home/equipmentTempController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/home/equipmentTempList.php" afterPath="$PROJECT_DIR$/App/View/home/equipmentTempList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Model/home/equipmentTempModel.php" afterPath="$PROJECT_DIR$/App/Model/home/equipmentTempModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php" afterPath="$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/home/equipmentUnitList.php" afterPath="$PROJECT_DIR$/App/View/home/equipmentUnitList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Model/home/equipmentUnitModel.php" afterPath="$PROJECT_DIR$/App/Model/home/equipmentUnitModel.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/home/newComponent.php" afterPath="$PROJECT_DIR$/App/View/home/newComponent.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/home/newEquipmentUnit.php" afterPath="$PROJECT_DIR$/App/View/home/newEquipmentUnit.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/View/js/tableItem.js" afterPath="$PROJECT_DIR$/App/View/js/tableItem.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,52 +35,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Model/database.php">
+      <file leaf-file-name="equipmentTempController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentTempController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-52.23077">
-              <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-              <folding>
-                <marker date="1499659483596" expanded="true" signature="1329:1427" placeholder="INSERT INTO ..." />
-                <marker date="1499659483596" expanded="true" signature="2210:2234" placeholder="DELETE FROM ..." />
-                <marker date="1499659483596" expanded="true" signature="2210:2236" placeholder="DELETE FROM ..." />
-                <marker date="1499659483596" expanded="true" signature="2210:2242" placeholder="DELETE FROM ..." />
-                <marker date="1499659483596" expanded="true" signature="2467:2523" placeholder="DELETE FROM ..." />
-                <marker date="1499659483596" expanded="true" signature="2751:2806" placeholder="DELETE FROM ..." />
-                <marker date="1499659483596" expanded="true" signature="3060:3080" placeholder="SELECT ${$se..." />
-                <marker date="1499659483596" expanded="true" signature="3678:3698" placeholder="SELECT ${$se..." />
-                <marker date="1499659483596" expanded="true" signature="4330:4363" placeholder="SELECT ${$se..." />
-                <marker date="1499659483596" expanded="true" signature="4837:4882" placeholder="SELECT * FRO..user..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="componentModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Model/home/componentModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.0">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.32733813">
+              <caret line="211" column="31" selection-start-line="211" selection-start-column="31" selection-end-line="211" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="componentList.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/View/home/componentList.php">
+      <file leaf-file-name="equipmentTempModel.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentTempModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46582735">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="equipmentTempList.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/View/home/equipmentTempList.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.653846">
-              <caret line="30" column="65" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="65" />
+            <state vertical-scroll-proportion="-3.4230769">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -140,18 +97,18 @@
         <option value="$PROJECT_DIR$/App/View/home/test.php" />
         <option value="$PROJECT_DIR$/App/View/home/equipmentUnitList.php" />
         <option value="$PROJECT_DIR$/App/View/home/newComponent.php" />
-        <option value="$PROJECT_DIR$/App/Model/home/componentModel.php" />
-        <option value="$PROJECT_DIR$/App/Controller/home/componentController.php" />
         <option value="$PROJECT_DIR$/App/Controller/home/equipmentController.php" />
         <option value="$PROJECT_DIR$/App/View/home/equipmentTempList.php" />
         <option value="$PROJECT_DIR$/App/Controller/home/equipmentTempController.php" />
-        <option value="$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php" />
         <option value="$PROJECT_DIR$/App/Model/home/equipmentUnitModel.php" />
-        <option value="$PROJECT_DIR$/App/View/js/tableItem.js" />
         <option value="$PROJECT_DIR$/App/Model/home/equipmentModel.php" />
         <option value="$PROJECT_DIR$/App/Model/home/equipmentTempModel.php" />
-        <option value="$PROJECT_DIR$/App/Model/database.php" />
         <option value="$PROJECT_DIR$/App/View/home/componentList.php" />
+        <option value="$PROJECT_DIR$/App/Model/database.php" />
+        <option value="$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php" />
+        <option value="$PROJECT_DIR$/App/Model/home/componentModel.php" />
+        <option value="$PROJECT_DIR$/App/Controller/home/componentController.php" />
+        <option value="$PROJECT_DIR$/App/View/js/tableItem.js" />
       </list>
     </option>
   </component>
@@ -195,6 +152,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -594,7 +552,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -691,26 +648,26 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31996974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32526475" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.022692889" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1724138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2557377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1724138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30541873" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2557377" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -865,13 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentListModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55135137">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Controller/home/damageFactor.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38848922">
@@ -900,14 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/componentListModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.5423424">
@@ -915,26 +857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/View/home/equipmentUnitList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27567568">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/View/home/newEquipmentUnit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controller/home/componentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7351351">
-          <caret line="90" column="89" selection-start-line="90" selection-start-column="89" selection-end-line="90" selection-end-column="89" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -957,14 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="24.192308">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentTempListModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,22 +915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="15" column="65" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentTempController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.03846">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/demo/Readme.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1041,118 +943,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/View/js/tableItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="34" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentUnitModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26618704">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Model/home/RBICalcuatorConnModel.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03417266">
           <caret line="91" column="23" selection-start-line="91" selection-start-column="23" selection-end-line="91" selection-end-column="23" />
-          <folding>
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="select art f..tbl_dfb_thin..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT gffTo..tbl_gff..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT small..tbl_gff..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT mediu..tbl_gff..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT large..tbl_gff..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT ruptu..tbl_gff..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT MW FR..tbl_properties_level1..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT SIUni..tbl_si_conversion..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT Auto ..tbl_properties_level1..." />
-            <marker date="1499164708256" expanded="true" signature="-1:-1" placeholder="SELECT ideal..tbl_properties_level1..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
-          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.923077">
-          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
-          <folding>
-            <marker date="1499659088013" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1499659088013" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-            <marker date="1499659088013" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/temp/equipmentUnitController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1923077">
-          <caret line="23" column="61" selection-start-line="23" selection-start-column="61" selection-end-line="23" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentTempModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding>
-            <marker date="1499659364532" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-52.23077">
-          <caret line="89" column="17" selection-start-line="89" selection-start-column="17" selection-end-line="89" selection-end-column="17" />
-          <folding>
-            <marker date="1499659483596" expanded="true" signature="1329:1427" placeholder="INSERT INTO ..." />
-            <marker date="1499659483596" expanded="true" signature="2210:2234" placeholder="DELETE FROM ..." />
-            <marker date="1499659483596" expanded="true" signature="2210:2236" placeholder="DELETE FROM ..." />
-            <marker date="1499659483596" expanded="true" signature="2210:2242" placeholder="DELETE FROM ..." />
-            <marker date="1499659483596" expanded="true" signature="2467:2523" placeholder="DELETE FROM ..." />
-            <marker date="1499659483596" expanded="true" signature="2751:2806" placeholder="DELETE FROM ..." />
-            <marker date="1499659483596" expanded="true" signature="3060:3080" placeholder="SELECT ${$se..." />
-            <marker date="1499659483596" expanded="true" signature="3678:3698" placeholder="SELECT ${$se..." />
-            <marker date="1499659483596" expanded="true" signature="4330:4363" placeholder="SELECT ${$se..." />
-            <marker date="1499659483596" expanded="true" signature="4837:4882" placeholder="SELECT * FRO..user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Model/home/componentModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.0">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/View/home/equipmentTempList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.653846">
-          <caret line="30" column="65" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="92" selection-start-line="6" selection-start-column="0" selection-end-line="9" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/View/home/equipmentUnitList.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19784173">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/View/home/componentList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46582735">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.6115108">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51079136">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentListModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5503597">
+          <caret line="18" column="43" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentUnitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentUnitModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="23" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/componentListModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03057554">
+          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/temp/equipmentUnitController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4586331">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/View/js/tableItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.7525773">
+          <caret line="190" column="6" selection-start-line="190" selection-start-column="6" selection-end-line="190" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controller/home/componentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/componentModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+          <folding>
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="SELECT ${$se..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="SELECT ${$se..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="SELECT ${$se..." />
+            <marker date="1499661840226" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..user..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5773382">
+          <caret line="24" column="54" selection-start-line="24" selection-start-column="54" selection-end-line="24" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentTempListModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Model/home/equipmentTempModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4230769">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Controller/home/equipmentTempController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32733813">
+          <caret line="211" column="31" selection-start-line="211" selection-start-column="31" selection-end-line="211" selection-end-column="31" />
           <folding />
         </state>
       </provider>
