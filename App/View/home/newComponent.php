@@ -1,5 +1,5 @@
 <div>
-    <form action="../../../Controller/home/componentController.php" onsubmit="return validateForm()" name="newComponent">
+    <form action="../../Controller/home/componentController.php" onsubmit="return validateForm()" name="newComponent">
     <fieldset>
         <legend>Create new Component:</legend>
         <table class="newComponentTable">

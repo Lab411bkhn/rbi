@@ -2,7 +2,7 @@
 class componentController {
     function __construct(){
         require("../../Model/home/componentModel.php");
-        $this->eqUnit = new componentController();
+      //  $this->eqUnit = new componentController();
         $this->MAXSIZE = 20;
 
 
@@ -88,3 +88,4 @@ class componentController {
 
 $cpnIndex = new componentController();
 $cpnIndex->index();
+header('Location: ../../View/home/index.php?data=home&action=listComponent&left=home_left');

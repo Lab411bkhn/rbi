@@ -11,6 +11,7 @@ class componentModel extends database{
 
     function insertComponent($data){
         //print_r($data);
+
         $this->insert('tbl_component',$data);
 
     }
@@ -35,6 +36,6 @@ class componentModel extends database{
     }
 }
 
-//$demo = new componentModel();
-//$arr = $demo->getAllComponent();
+$demo = new componentModel();
+$arr = $demo->getAllComponent();
 //print_r($arr);

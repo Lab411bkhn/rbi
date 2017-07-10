@@ -34,7 +34,7 @@ $value = $equList->getAllEquipmentUnit();
     ?>
 </table>
 <div id="deleteItem" >
-    <button onclick="deleteItem()">Delete Items</button>
+    <button onclick="deleteEqipmentTem()">Delete Items</button>
 </div>
 <form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentTempController.php">
     <div class="form-group">

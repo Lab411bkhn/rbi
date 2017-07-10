@@ -22,7 +22,7 @@ $val = $cpnList->getAllComponent();
             foreach ($value as $key => $va) {
                 echo "<td>$va</td>";
             }
-            echo "<td><input type='checkbox' name='checkBoxComponent' onchange='checkBoxChangeHandlerCpn()'></td>";
+            echo "<td><input type='checkbox' name='checkBoxClass' onchange='checkBoxChangeHandler()'></td>";
             echo "</tr>";
         }
     ?>

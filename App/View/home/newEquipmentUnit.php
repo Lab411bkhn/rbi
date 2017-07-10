@@ -23,7 +23,7 @@
         </table>
     </fieldset>
   </form>
-</div>  
+</div>
 <script>
     function validateForm() {
         var x = document.forms["newEquipmentUnit"]["equUnitCode"].value;

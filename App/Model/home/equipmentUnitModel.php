@@ -29,7 +29,9 @@ class equipmentUnitModel extends database{
     
     function deleteEquipmentUnit($unitCode){
         foreach ($unitCode as $value) {
-            $this->remove('tbl_equipmentforrbi', 'UnitCode='.$value);            
+           // echo $value;
+            $this->remove('tbl_equipmentforrbi', 'UnitCode='.$value);
+
         }
     }
     

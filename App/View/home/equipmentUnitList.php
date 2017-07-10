@@ -3,6 +3,8 @@ require_once '../../Model/home/equipmentUnitListModel.php';
 $equList = new equipmentUnitListModel();
 $params = $equList->getAllPrameters();
 $val = $equList->getAllEquipmentUnit();
+
+
 ?>
 <link rel="stylesheet" href="../../../../Public/css/home.css">
 <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
@@ -39,7 +41,8 @@ $val = $equList->getAllEquipmentUnit();
         <p class="help-block">Only .xls File Import.</p>
     </div>
     <button type="submit" class="btn btn-default" name="Import" value="Import">Upload</button>
-</form>
+
+
 <script>
    /* function deleteItem(){
         var x = document.getElementsByClassName("checkBoxClass");

@@ -19,10 +19,12 @@ class equipmentModel extends database {
     }
     function deleteEquipment($eqItemNo){
         foreach ($eqItemNo as $val) {
-           // echo $val;
-            $sql = " DELETE FROM tbl_equipment WHERE  ItemNo = '.$val.'";
+         //   echo $val;
+           // $this->connect();
+           // $sql = " DELETE FROM tbl_equipment WHERE  ItemNo = '".$val."'";
+          //  mysql_query($sql);
 
-          //  $this->remove('tbl_equipmentlist', 'ItemNo ='.$val.'');
+          $this->removeeq($val);
         }
     }
 }

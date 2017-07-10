@@ -14,7 +14,7 @@ class equipmentUnitController {
                 $equUnitCodeStr = isset($_GET["equUnitCode"])?$_GET["equUnitCode"]:NULL;
                 $equUnitCode = json_decode($equUnitCodeStr);
                 $this->eqUnit->deleteEquipmentUnit($equUnitCode);
-                //echo "DUONG DELETE";
+               // echo "DUONG DELETE";
             }
         }
         else {
@@ -94,6 +94,7 @@ class equipmentUnitController {
         }
     }
 }
+
     
 $equIndex = new equipmentUnitController();
 $equIndex->index();

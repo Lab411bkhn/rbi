@@ -14,7 +14,8 @@
 class equipmentController {
     function __construct() {
         require_once ("../../Model/home/equipmentModel.php");
-        $this->equ = new equipmentModel();
+       // $this->equ = new equipmentModel();
+        $this->newModel = new equipmentModel();
     }
     //put your code here
     function index(){
@@ -22,7 +23,8 @@ class equipmentController {
             if($_GET["act"]=='delete'){
                 $eqItemNoStr = isset($_GET["eqItemNo"])?$_GET["eqItemNo"]:NULL;
                 $eqItemNo = json_decode($eqItemNoStr);
-                $this->equ->deleteEquipment($eqItemNo);
+                $this->newModel->deleteEquipment($eqItemNo);
+
                // echo "DUONG DELETE".$eqItemNoStr;
             }
         }
@@ -68,14 +70,14 @@ class equipmentController {
                     require '../../Controller/404.php';
                     return;
                 }            
-                $newModel = new equipmentModel();
-                if($newModel->isExist($eqItemNo)){
+              //  $newModel = new equipmentModel();
+               // if($newModel->isExist($eqItemNo)){
 
-                }
-                else {
+              //  }
+               // else {
                     //print_r($data);
-                    $newModel->insertEquipment($data);
-                }
+                    $this->newModel->insertEquipment($data);
+               // }
             }
         }
     }
@@ -108,7 +110,7 @@ class equipmentController {
                                 $equName = $excel->sheets[0]['cells'][$row][2];
                                 $equProcessSytem = $excel->sheets[0]['cells'][$row][3];
                                 if(is_numeric($equUnitCode)&&($equName!="")&&$equProcessSytem!="")
-                                    $this->eqUnit->insertEquipmentUnit($equUnitCode, $equName, $equProcessSytem);
+                                    $this->newModel->insertEquipment($equUnitCode, $equName, $equProcessSytem);
                                 else                                    
                                     return;
                             } catch (Exception $ex) {

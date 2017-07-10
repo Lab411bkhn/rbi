@@ -70,7 +70,25 @@ class database
     {
         $this->connect();
         // Delete
-        $sql = "DELETE FROM $table WHERE $where";
+        $sql = "DELETE FROM $table WHERE  $where";
+        $ret = mysqli_query($this->__conn, $sql) or die(mysqli_error($this->__conn));
+        return $ret;
+        // }
+    }
+    function removeeq($where)
+    {
+        $this->connect();
+        // Delete
+        $sql = "DELETE FROM tbl_equipmentlist WHERE ItemNo ='".$where."'";
+        $ret = mysqli_query($this->__conn, $sql) or die(mysqli_error($this->__conn));
+        return $ret;
+        // }
+    }
+    function removeeqTem($where)
+    {
+        $this->connect();
+        // Delete
+        $sql = "DELETE FROM tbl_equipmenttemp WHERE Plant ='".$where."'";
         $ret = mysqli_query($this->__conn, $sql) or die(mysqli_error($this->__conn));
         return $ret;
         // }
