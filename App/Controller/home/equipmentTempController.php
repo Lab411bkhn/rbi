@@ -1,5 +1,6 @@
 <?php
 require'../../Model/libraries/excel_reader.php';
+ob_start();
 class equipmentTempController
 {
     function __construct()
@@ -7,7 +8,7 @@ class equipmentTempController
         //;
         require("../../Model/home/equipmentTempModel.php");
         $this->newTempModel = new equipmentTempModel();
-        $this->MaxSize = 100;
+        $this->MaxSize = 500;
     }
 
     function index()
@@ -259,7 +260,8 @@ class equipmentTempController
                         return;
                     }
                 }
-            } else {
+            }
+            else {
                 echo "Invalid File:Please Upload CSV File";
             }
         }
@@ -272,6 +274,7 @@ $equTemp = new equipmentTempController();
 $equTemp->imPortData();
 $equTemp->index();
 header('Location: ../../View/home/index.php?data=home&action=listEquipmentTemp&left=home_left');
+ob_end_flush();
 
 
 

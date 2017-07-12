@@ -10,11 +10,6 @@ if (is_uploaded_file($_FILES['file']['tmp_name'])) {
 
     if (move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile)) {
 
-        require("notie.php");
-
-
-      //  echo "File is valid, and was successfully moved. ";
-
     }
 
     else
@@ -24,9 +19,7 @@ if (is_uploaded_file($_FILES['file']['tmp_name'])) {
 }
 
 else {
-
-    echo "Upload Failed!!!";
-
+    
     print_r($_FILES);
 
 }

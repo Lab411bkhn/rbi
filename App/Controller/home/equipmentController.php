@@ -12,6 +12,7 @@ require_once '../../Model/libraries/excel_reader.php';
  *
  * @author Dương
  */
+ob_start();
 class equipmentController {
     function __construct() {
         require_once ("../../Model/home/equipmentModel.php");
@@ -83,7 +84,7 @@ class equipmentController {
             }
         }
     }
-    
+
     function importData() {
         $excel = new PhpExcelReader;
         if(isset($_POST["Import"]))
@@ -111,10 +112,10 @@ class equipmentController {
                                 $eqPressure = $excel->sheets[1]['cells'][$row][9];
                                 $eqPHA = $excel->sheets[1]['cells'][$row][10];
                                 $eqBusinessLoss = $excel->sheets[1]['cells'][$row][11];
-                                $eqProcessStreamFluid = $excel->sheets[1]['cells'][$row][12];
-                                $eqOperatingPressure = $excel->sheets[1]['cells'][$row][13];
-                                $eqPHARate = $excel->sheets[1]['cells'][$row][14];
-                                $eqBusinessLossValue = $excel->sheets[1]['cells'][$row][15];
+                                $eqProcessStreamFluid = $excel->sheets[1]['cells'][$row][13];
+                                $eqOperatingPressure = $excel->sheets[1]['cells'][$row][14];
+                                $eqPHARate = $excel->sheets[1]['cells'][$row][15];
+                                $eqBusinessLossValue = $excel->sheets[1]['cells'][$row][16];
                                // $eqGroup = $excel->sheets[1]['cells'][$row][16];
                              //   $eqType = $excel->sheets[1]['cells'][$row][17];
                                // $eqDescription = $excel->sheets[1]['cells'][$row][18];
@@ -152,10 +153,9 @@ class equipmentController {
                           //  echo $excel->sheets[0]['cells'][$row][$col];
                             //$this->eqUnit->insertEquipmentUnit($equUnitCode, $equName, $equProcessSytem);
                         }
-//                        return;
-                    }
-                    else
                         return;
+                  }
+
                 }
             }
             else
@@ -167,4 +167,6 @@ class equipmentController {
 $equIndex = new equipmentController();
 $equIndex->index();
 $equIndex->importData();
-header('Location: ../../View/home/index.php?data=home&action=listComponent&left=home_left');
+header('Location: ../../View/home/index.php?data=home&action=listEquipment&left=home_left');
+ob_end_flush();
+
