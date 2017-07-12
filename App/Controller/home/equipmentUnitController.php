@@ -56,16 +56,6 @@ class equipmentUnitController {
             if($_FILES["file"]["size"] > 0)
             {
                 $excel->read($filename);
-                //$excel->read('test.xls');
-              //  $nr_sheets = count($excel->sheets);       // gets the number of sheets
-                $excel_data = '';              // to store the the html tables with data of each sheet
-                // traverses the number of sheets and sets html table with each sheet data in $excel_data
-//                for($i=0; $i<$nr_sheets; $i++) {
-//                    $excel_data .= '<h4>Sheet '.($i + 1).' (<em>'.$excel->boundsheets[$i]['name'].'</em>)</h4>'.$this->sheetData($excel->sheets[$i]).'<br/>';  
-//                }   
-                //echo '<em>'.$excel->boundsheets[0]['name'].'</em>';
-                //echo $this->sheetData($excel->sheets[0]);
-                //echo $excel->sheets[0]['cells'][4][3];
                 for($row=1;$row<$this->MAXSIZE;$row++){
                     if(($excel->sheets[0]['cells'][$row][1]) == 'Unit Code') {
                         echo "DONG:".$row;
@@ -82,7 +72,7 @@ class equipmentUnitController {
                             } catch (Exception $ex) {
                                 return;
                             }
-                            //echo $excel->sheets[0]['cells'][$row][$col];
+                           // echo $excel->sheets[0]['cells'][$row][$col];
                             //$this->eqUnit->insertEquipmentUnit($equUnitCode, $equName, $equProcessSytem);
                         }
                         return;

@@ -1,4 +1,5 @@
 <?php
+require_once '../../Model/libraries/excel_reader.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -16,6 +17,7 @@ class equipmentController {
         require_once ("../../Model/home/equipmentModel.php");
        // $this->equ = new equipmentModel();
         $this->newModel = new equipmentModel();
+        $this->MaxSize = 50 ;
     }
     //put your code here
     function index(){
@@ -86,41 +88,74 @@ class equipmentController {
         $excel = new PhpExcelReader;
         if(isset($_POST["Import"]))
         {
-            echo $filename=$_FILES["file"]["tmp_name"];
+            $filename=$_FILES["file"]["tmp_name"];
+            $col =2;
             if($_FILES["file"]["size"] > 0)
             {
                 $excel->read($filename);
-                //$excel->read('test.xls');
-                $nr_sheets = count($excel->sheets);       // gets the number of sheets
-                $excel_data = '';              // to store the the html tables with data of each sheet
-                // traverses the number of sheets and sets html table with each sheet data in $excel_data
-//                for($i=0; $i<$nr_sheets; $i++) {
-//                    $excel_data .= '<h4>Sheet '.($i + 1).' (<em>'.$excel->boundsheets[$i]['name'].'</em>)</h4>'.$this->sheetData($excel->sheets[$i]).'<br/>';  
-//                }   
-                //echo '<em>'.$excel->boundsheets[0]['name'].'</em>';
-                //echo $this->sheetData($excel->sheets[0]);
-                //echo $excel->sheets[0]['cells'][4][3];
-                for($row=1;$row<$this->MAXSIZE;$row++){
-                    if(($excel->sheets[0]['cells'][$row][1]) == 'Unit Code') {
-                        echo "DONG:".$row;
-                        $col = 1;
+                for($row=6;$row<$this->MaxSize;$row++){
+                    if(($excel->sheets[1]['cells'][$row][2]) === 'Item No.') {
+                       // echo $excel->sheets[1]['cells'][$row][$col];
+                       // echo "DONG:".$row;
+                       // $col = 1;
+                        $row +=1;
                         while(++$row){
                             try{
-                                $equUnitCode = $excel->sheets[0]['cells'][$row][1];
-                                $equName = $excel->sheets[0]['cells'][$row][2];
-                                $equProcessSytem = $excel->sheets[0]['cells'][$row][3];
-                                if(is_numeric($equUnitCode)&&($equName!="")&&$equProcessSytem!="")
-                                    $this->newModel->insertEquipment($equUnitCode, $equName, $equProcessSytem);
-                                else                                    
+
+                                $eqItemNo = $excel->sheets[1]['cells'][$row][2];
+                                $eqName = $excel->sheets[1]['cells'][$row][3];
+                                $eqQuantity = $excel->sheets[1]['cells'][$row][4];
+                                $eqSemiQuan = $excel->sheets[1]['cells'][$row][5];
+                                $eqQuan = $excel->sheets[1]['cells'][$row][6];
+                                $eqProcessStream =$excel->sheets[1]['cells'][$row][8];
+                                $eqPressure = $excel->sheets[1]['cells'][$row][9];
+                                $eqPHA = $excel->sheets[1]['cells'][$row][10];
+                                $eqBusinessLoss = $excel->sheets[1]['cells'][$row][11];
+                                $eqProcessStreamFluid = $excel->sheets[1]['cells'][$row][12];
+                                $eqOperatingPressure = $excel->sheets[1]['cells'][$row][13];
+                                $eqPHARate = $excel->sheets[1]['cells'][$row][14];
+                                $eqBusinessLossValue = $excel->sheets[1]['cells'][$row][15];
+                               // $eqGroup = $excel->sheets[1]['cells'][$row][16];
+                             //   $eqType = $excel->sheets[1]['cells'][$row][17];
+                               // $eqDescription = $excel->sheets[1]['cells'][$row][18];
+                               // $eqUnitCode = $excel->sheets[1]['cells'][$row][17];
+                                $data = array(
+                                    "ItemNo" => $eqItemNo,
+                                    "Name" => $eqName,
+                                    "Qty" => $eqQuantity,
+                                    "SemiQualitative" => $eqSemiQuan,
+                                    "Quanlitative" => $eqQuan,
+                                    "ProcessStream" => $eqProcessStream,
+                                    "Pressure" => $eqPressure,
+                                    "PHA" => $eqPHA,
+                                    "Business" => $eqBusinessLoss,
+                                    "ProcessStreamFluid" => $eqProcessStreamFluid,
+                                    "OperatingPressure" => $eqOperatingPressure,
+                                    "PHARating" => $eqPHARate,
+                                    "BusinessLossValue" => $eqBusinessLossValue,
+                                   // "EquipmentGroup" => $eqGroup,
+                                   // "Type" => $eqType,
+                                   // "EquipmentDescription" => $eqDescription,
+                                   // "tbl_equipmentforrbi_UnitCode" => $eqUnitCode
+                                );
+                                if($eqName != ""){
+
+                                    $this->newModel->insertEquipment($data);
+                                    // }
+                                }
+
+                                else
                                     return;
                             } catch (Exception $ex) {
                                 return;
                             }
-                            //echo $excel->sheets[0]['cells'][$row][$col];
+                          //  echo $excel->sheets[0]['cells'][$row][$col];
                             //$this->eqUnit->insertEquipmentUnit($equUnitCode, $equName, $equProcessSytem);
                         }
-                        return;
+//                        return;
                     }
+                    else
+                        return;
                 }
             }
             else
@@ -131,5 +166,5 @@ class equipmentController {
 
 $equIndex = new equipmentController();
 $equIndex->index();
-//$equIndex->importData();
-header('Location: ../../View/home/index.php?data=home&action=listEquipment&left=home_left');
+$equIndex->importData();
+header('Location: ../../View/home/index.php?data=home&action=listComponent&left=home_left');

@@ -53,7 +53,7 @@ function searchFunction_cpn() {
     }
 }*/
 function checkBoxChangeHandler(){
-    alert("DEMO");
+  //  alert("DEMO");
     var x = document.getElementsByClassName("checkBoxClass");
     var y = document.getElementById('deleteItem');     
     for (var i = 0; i < x.length; i++) {
@@ -70,7 +70,7 @@ function checkBoxChangeHandler(){
 }
 
 function checkBoxChangeHandlerEq(){
-     alert("DEMO");
+   //  alert("DEMO");
     var x = document.getElementsByClassName("checkBoxEquipment");
     var y = document.getElementById('deleteItem');
     for (var i = 0; i < x.length; i++) {
@@ -130,6 +130,34 @@ function deleteItems(){
         }
     });
 }
+function deleteAllItems(){
+    // alert("DEMO");
+    var x = document.getElementsByClassName("checkBoxClass");
+    table = document.getElementById("listTable");
+    tr = table.getElementsByTagName("tr");
+    var items = [];
+    for (var i = 0; i < x.length; i++) {
+        //if(x[i].checked) {
+            //Lay Id bat dau tu dong thu 2, bo qua ten cot
+            x[i].checked = true;
+            td = tr[i+1].getElementsByTagName("td")[0];
+            if (td) {
+                items.push(td.innerHTML);
+            }
+        //}
+    }
+
+    var dataq = JSON.stringify(items);
+
+    $.ajax({
+        url: "../../Controller/home/equipmentUnitController.php",
+        data: 'act=delete&equUnitCode=' + dataq,
+        success: function(req){
+            alert("Delete Unit Code" + dataq + " successfully! ");
+            $(location).attr('href', '../../View/home/index.php?data=home&action=listEquipmentUnit&left=home_left');
+        }
+    });
+}
 
 function deleteEquipment(){
   //  alert("DEMO");
@@ -159,9 +187,38 @@ function deleteEquipment(){
     });
 }
 
+function deleteAll(){
+    // alert("DEMO");
+    var x = document.getElementsByClassName("checkBoxEquipment");
+    table = document.getElementById("listTable");
+    tr = table.getElementsByTagName("tr");
+    var items = [];
+    for (var i = 0; i < x.length; i++) {
+        //if(x[i].checked) {
+            //Lay Id bat dau tu dong thu 2, bo qua ten cot
+            x[i].checked = true;
+            td = tr[i+1].getElementsByTagName("td")[0];
+            if (td) {
+                items.push(td.innerHTML);
+            }
+        //}
+    }
+
+    var dataq = JSON.stringify(items);
+
+    $.ajax({
+        url: "../../Controller/home/equipmentController.php",
+        data: 'act=delete&eqItemNo=' + dataq,
+        success: function(){
+            alert("Delete Equipment " + dataq + " successfully! ");
+            $(location).attr('href', '../../View/home/index.php?data=home&action=listEquipment&left=home_left');
+        }
+    });
+}
+
 
 function deleteComponent(){
-    alert("DEMO");
+    //alert("DEMO");
     var x = document.getElementsByClassName("checkBoxClass");
     table = document.getElementById("listTable");
     tr = table.getElementsByTagName("tr");
@@ -174,6 +231,34 @@ function deleteComponent(){
                 items.push(td.innerHTML);
             }
         }
+    }
+
+    var dataq = JSON.stringify(items);
+
+    $.ajax({
+        url: "../../Controller/home/componentController.php",
+        data: 'act=delete&cpnName=' + dataq,
+        success: function(){
+            alert("Delete Component " + dataq + " successfully! ");
+            $(location).attr('href', '../../View/home/index.php?data=home&action=listComponent&left=home_left');
+        }
+    });
+}
+function deleteAllComponent(){
+    //alert("DEMO");
+    var x = document.getElementsByClassName("checkBoxClass");
+    table = document.getElementById("listTable");
+    tr = table.getElementsByTagName("tr");
+    var items = [];
+    for (var i = 0; i < x.length; i++) {
+        //if(x[i].checked) {
+            //Lay Id bat dau tu dong thu 2, bo qua ten cot
+        x[i].checked = true;
+            td = tr[i+1].getElementsByTagName("td")[0];
+            if (td) {
+                items.push(td.innerHTML);
+            }
+        //}
     }
 
     var dataq = JSON.stringify(items);
@@ -214,6 +299,35 @@ function deleteEqipmentTem(){
         }
     });
 }
+function deleteAllEqipmentTem(){
+    //alert("DEMO");
+    var x = document.getElementsByClassName("checkBoxClass");
+    table = document.getElementById("listTable");
+    tr = table.getElementsByTagName("tr");
+    var items = [];
+    for (var i = 0; i < x.length; i++) {
+        //if(x[i].checked) {
+            //Lay Id bat dau tu dong thu 2, bo qua ten cot
+             x[i].checked = true;
+            td = tr[i+1].getElementsByTagName("td")[0];
+            if (td) {
+                items.push(td.innerHTML);
+            }
+        //}
+    }
+
+    var dataq = JSON.stringify(items)
+
+    $.ajax({
+        url: "../../Controller/home/equipmentTempController.php",
+        data: 'act=delete&pltName=' + dataq,
+        success: function(){
+            alert("Delete EquipmentTemplates " + dataq + " successfully! ");
+            $(location).attr('href', '../../View/home/index.php?data=home&action=listEquipmentTemp&left=home_left');
+        }
+    });
+}
+
 
 
 

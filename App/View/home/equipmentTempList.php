@@ -36,6 +36,9 @@ $value = $equList->getAllEquipmentUnit();
 <div id="deleteItem" >
     <button onclick="deleteEqipmentTem()">Delete Items</button>
 </div>
+<div id="deleteItem" >
+    <button onclick="deleteAllEqipmentTem()">Delete All</button>
+</div>
 <form enctype="multipart/form-data" method="post" role="form" action="../../Controller/home/equipmentTempController.php">
     <div class="form-group">
         <label for="exampleInputFile">File Upload</label>
@@ -43,6 +46,13 @@ $value = $equList->getAllEquipmentUnit();
         <p class="help-block">Only .xls File Import.</p>
     </div>
     <button type="submit" class="btn btn-default" name="Import" value="Import">Upload</button>
+</form>
+<form action="../../Controller/home/uploadInput.php" method="POST" enctype="multipart/form-data">
+    <div class="row" >
+        <span>Equipment template:</span>
+        <input type="file" name="fileupload_1"/><input type="submit" value="submit" name="submit3"/>
+
+    </div>
 </form>
 
 

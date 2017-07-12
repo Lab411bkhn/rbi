@@ -5,19 +5,16 @@ class equipmentTempModel extends database{
     function __construct() {
         
     }
-    
-    
+
     function insertTemplate($data){
         $this->insert('tbl_equipmenttemp', $data);
         //print_r($data);
     }
+
     function  deleteEquipmentTem($pltName){
         //$this->connect();
         foreach($pltName as $val) {
-            echo $val;
-           // $sql = "DELETE FROM tbl_equipmenttemp WHERE Plant = '" . $val . "'";
-           // mysql_query($sql);
-
+          //  echo $val;
             $this->removeeqTem($val);
         }
     }
