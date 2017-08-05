@@ -1,6 +1,7 @@
 *{margin: 0px; padding: 0px;}
 li {list-style: none;}
 .header {width: 100%; height: 100px; background-image: url(../images/banner.jpg); background-size: inherit;}
+.dung{ text-align:right; }
 .main_menu>ul>li>a {text-decoration: none; color: #FFF; font-size: 16px;}
 .clear {clear: both;}
 .wrapper{width: 100%; height: auto; background: #F8F8F8; margin: 0px auto;}

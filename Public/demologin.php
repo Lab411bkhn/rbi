@@ -1,45 +1,33 @@
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="../Public/css/style.css">
 <?php
-session_start();
-if(isset($_SESSION['username'])){ 
-    header("Location:../../App/View/home/index.php");
+if (isset($_POST["op"] ) && $_POST["op"] == "login")
+{
+    // B1: L?y thông tin
+    $username = isset($_POST['username']) ? $_POST['username'] : '';
+    $password = isset($_POST['password']) ? $_POST['password'] : '';
+    // B2: Ki?m tra d? li?u
+    if ($password == 'admin' && $username == 'admin'){
+        $URL="../App/View/home/index.php";
+        header ("Location: $URL");
+    }
+    else{
+        echo "";
+    }
 }
 
-require_once '../App/Controller/userController.php';
-require_once '../App/Model/user.php';
-@$op = $_REQUEST['op'];
-$user_controller = new userController();
-switch ($op) {
-    case 'login':
-        $userName = 'admin';//$_POST['username'];
-        $password = 'admin';//$_POST['password'];
-        if($user_controller->login($userName, $password)){
-            header("Location:../App/View/home/index.php");
-        }
-        else{
-            //header("Location:../../App/View/home/index.php");
-        }
-        break;
-
-    default:
-        break;
-}
 ?>
 
-<div class="login-page">
-  <div class="form">
-    <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
-    </form>
-      <form class="login-form" action="demologin.php" method="POST">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <input class="button" type="submit" name="op" value="login"/>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
-    </form>
-  </div>
-</div>
+<form  method="POST">
+
+    <div class="relative"><img width="105%" height="100%" src="http://nangluongvietnam.vn/stores/news_dataimages/Tongbientap/042017/25/09/Dinhvu_1.jpg" /></div>
+    <div class="login-page">
+        <div class="form">
+            <h1>Welcom to Login</h1>
+            <form class="register-form">
+                <input type="text" placeholder="Username" name="username"/>
+                <input type="password" placeholder="Password" name="password"/>
+                <input class="button" type="submit" name="op" value="login"/>
+            </form>
+        </div>
+    </div>
+</form>

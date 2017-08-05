@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="../../../Public/css/home.css">
+<div class="dung"><h2><a href="http://localhost:63342/rbi/Public/demologin.php">Log Out</a>&nbsp&nbsp<a href="http://localhost:63342/rbi/Public/signup.php">Sign UP</a></h2></div>
 <div class="main_menu">   
     <ul>
             <li><a href="index.php?data=home&left=home_left">Home</a>
@@ -24,6 +25,8 @@
                 </ul>
             </li>
             <li><a href="index.php?data=help&left=help_left">Help</a></li>
+
+
     </ul>
     <div class="clear"></div>
 </div>

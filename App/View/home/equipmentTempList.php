@@ -54,5 +54,11 @@ $value = $equList->getAllEquipmentUnit();
 
     </div>
 </form>
+<form method="post"action="../../Controller/home/email.php">
+    <div>
+        <input type="submit" value="Send mail">
+    </div>
+
+</form>
 
 

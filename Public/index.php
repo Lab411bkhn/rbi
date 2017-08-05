@@ -18,6 +18,7 @@ and open the template in the editor.
         <li><a href="../Public/index.php?data=tools">Tools</a></li>
         <li><a href="../Public/index.php?data=components">Components</a></li>
         <li><a href="../Public/index.php?data=help">Help</a></li>
+
     </ul>
     <?php
     require '../App/View/menu.php';
