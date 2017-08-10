@@ -3,7 +3,7 @@ require_once '../../Model/home/equipmentUnitModel.php';
 $eqUnit = new equipmentUnitModel();
 $unitCodes = $eqUnit->getAllEquipmentUnitCode();
 ?>
-<link rel="stylesheet" href="../../../../Public/css/home.css">
+<link rel="stylesheet" href="../../../../Public/css/home.css" xmlns="http://www.w3.org/1999/html">
 <form action="../../Controller/home/equipmentTempController.php" onsubmit="return validateForm()" name="newPlant" method="POST">
         <fieldset>            
         <table>
@@ -167,7 +167,197 @@ $unitCodes = $eqUnit->getAllEquipmentUnitCode();
                 <td><strong>Service</strong><br/><input type="text" name="pltService">
                 <td><strong>HMB Stream#</strong><br/><input type="text" name="pltHMBStream">
             </tr>
-            </table>
+            <tr>
+               <td><p><i>Thinning Damage</i></p></td>
+            </tr>
+            <tr>
+                <td><strong>CrackPresent</strong><br/><input type="text" name="pltCrackPresent">
+                <td><strong>PBarrier</strong><br/><input type="text" name="pltPBarrier">
+                <td><strong>InLiner</strong><br/><input type="text" name="pltInLiner">
+                <td><strong>Catalog Thinning</strong><br/><input type="text" name="pltCaThinning">
+            </tr>
+            <tr>
+                <td><strong>Number of Inspection[l?n]</strong><br/><input type="text" name="pltNuOfInspection">
+                <td><strong>Check Thinning</strong><br/><input type="text" name="pltChThining">
+                <td><strong>Cladding</strong><br/><input type="text" name="pltCladding">
+                <td><strong>Injection Point Fip</strong><br/><input type="text" name="pltInPoiFip">
+            </tr>
+            <tr>
+                <td><strong>Dead Legs Fdl</strong><br/><input type="text" name="pltDeLegFdl">
+                <td><strong>Welded Construction Fwd</strong><br/><input type="text" name="pltWelConsFwd">
+                <td><strong>Maintenance Accordance Fam</strong><br/><input type="text" name="pltMaiAccFsm">
+                <td><strong>Settlement Fsm</strong><br/><input type="text" name="pltSettFsm">
+            </tr>
+            <tr>
+                <td><strong>Corrosion rate for Base Matel</strong><br/><input type="text" name="pltCorrRaBaseMatel">
+                <td><strong>Corrosion rate for Cladding[mpy]</strong><br/><input type="text" name="pltCorrRaCladding">
+                <td><strong>Thickness of comp base metal [in]</strong><br/><input type="text" name="pltThickBaseMetal">
+
+            </tr>
+            <tr><td><p><i>Linning Damage</i></p></td></tr>
+            <tr>
+                <td><strong>linning Type</strong><br/><input type="text" name="pltLinType">
+                <td><strong>Linning Adjusmen(Flc)</strong><br/><input type="text" name="pltLinAdj">
+                <td><strong>Year In Service</strong><br/><input type="text" name="pltYearSer">
+            </tr>
+           <tr>
+               <td><p><i>Caustic Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Level Caustic</strong><br/><input type="text" name="pltLvlCaustic">
+               <td><strong>Catalog Caustic</strong><br/><input type="text" name="pltCatCaustic">
+
+           </tr>
+           <tr>
+               <td><p><i>Amine Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Level Amine</strong><br/><input type="text" name="pltLvlAmine">
+               <td><strong>Catalog Amine</strong><br/><input type="text" name="pltCatAmine">
+
+           </tr>
+           <tr>
+               <td><p><i>Sulfide Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog Sulfide</strong><br/><input type="text" name="pltCaSulfide">
+               <td><strong>pH</strong><br/><input type="text" name="pltPH">
+               <td><strong>Sulfide Concentration</strong><br/><input type="text" name="pltSuConcentration">
+
+           </tr>
+           <tr>
+               <td><p><i>HIC/SOHIC- H2S</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog HIC/H2S</strong><br/><input type="text" name="pltCaH2S">
+               <td><strong>H2S Concentration</strong><br/><input type="text" name="pltH2SConcentration">
+
+           </tr>
+           <tr>
+               <td><p><i>Carbonate Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog Cacbon</strong><br/><input type="text" name="pltCaCacbon">
+               <td><strong>Cacbon Concentration</strong><br/><input type="text" name="pltCaConcentration">
+
+           </tr>
+           <tr>
+               <td><p><i>PTA Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog PTA</strong><br/><input type="text" name="pltCaPTA">
+               <td><strong>Function of heat Treatment</strong><br/><input type="text" name="pltFunHeaTreat">
+
+           </tr>
+           <tr>
+               <td><p><i>CLSCC Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog CLSCC</strong><br/><input type="text" name="pltCaCLSCC">
+               <td><strong>Temperat of PH</strong><br/><input type="text" name="pltTemperPH">
+               <td><strong>Clo Concentration</strong><br/><input type="text" name="pltCloConcentration">
+
+           </tr>
+           <tr>
+               <td><p><i>HF Damage</i></p></td>
+           </tr>
+           <tr>
+               <td><strong>Catalog HF</strong><br/><input type="text" name="pltCaHF">
+               <td><strong>HF present</strong><br/><input type="text" name="pltHFPresent">
+               <td><strong>Brinell Hardness</strong><br/><input type="text" name="pltBrilHardness">
+
+           </tr>
+           <tr><td><p><i>HIC/HF Damage</i></p></td></tr>
+           <tr>
+               <td><strong>Catalog HIC/H2F</strong><br/><input type="text" name="pltCaHICHF">
+               <td><strong>Sulfur Concentration</strong><br/><input type="text" name="pltSulfurConcentration">
+
+           </tr>
+           <tr><td><p><i>External Corrosion Damage</i></p></td></tr>
+           <tr>
+               <td><strong>Catalog Extenal Corrosion</strong><br/><input type="text" name="pltCaExCorrosion">
+               <td><strong>Driver Extend</strong><br/><input type="text" name="pltDriExtend">
+               <td><strong>Coat Quality</strong><br/><input type="text" name="pltCoQuality">
+
+           </tr>
+           <tr><td><p><i>CUI Ferrictic Component </i></p></td></tr>
+           <tr>
+               <td><strong>Catalog CUI</strong><br/><input type="text" name="pltCataCUI">
+               <td><strong>Driver CUI</strong><br/><input type="text" name="pltDriCUI">
+               <td><strong>Corrosion Rate for CUI</strong><br/><input type="text" name="pltCorrRateCUI">
+               <td><strong>Complexity</strong><br/><input type="text" name="pltComplexity">
+
+           </tr>
+           <tr>
+               <td><strong>Insulation</strong><br/><input type="text" name="pltInsu">
+               <td><strong>Allow Config</strong><br/><input type="text" name="pltAllConfig">
+               <td><strong>Enter Soil</strong><br/><input type="text" name="pltEnterSoil">
+               <td><strong>Insulation Type</strong><br/><input type="text" name="pltInsuTpy">
+
+           </tr>
+           <tr><td><p><i>External CLSCC</i></p></td></tr>
+           <tr>
+               <td><strong>Catalog Externak CLSCC</strong><br/><input type="text" name="pltCaEXCLSCC">
+               <td><strong>Driver External CLSCC</strong><br/><input type="text" name="pltDriExCLSCC">
+
+           </tr>
+           <tr><td><p><i>External CUI</i></p></td></tr>
+           <tr>
+               <td><strong>Piping Complexity</strong><br/><input type="text" name="pltPipingComp">
+               <td><strong>Insulation Condition</strong><br/><input type="text" name="pltInsCondition">
+
+           </tr>
+           <tr><td><p><i>HTHA</i></p></td></tr>
+           <tr>
+               <td><strong>Catalog HTHA</strong><br/><input type="text" name="pltCataHTHA">
+               <td><strong>Age HTHA[hours]</strong><br/><input type="text" name="pltAgeHTHA">
+               <td><strong>Temperat ure HTHA</strong><br/><input type="text" name="pltTempHTHA">
+               <td><strong>Hydrogen Partial Pressure</strong><br/><input type="text" name="pltHydParPress">
+           </tr>
+           <tr><td><p><i>BrittleFacture</i></p></td></tr>
+           <tr>
+               <td><strong>TempMin for Brittle Facture</strong><br/><input type="text" name="pltTempMinBriFac">
+               <td><strong>TempUpset of Brittle Facture</strong><br/><input type="text" name="pltTempUpsetBriFac">
+               <td><strong> Temp Boiling for Brittle Facture</strong><br/><input type="text" name="pltTempBrittleFac">
+               <td><strong>Minimum Design Metal Temp</strong><br/><input type="text" name="pltMinimum">
+           </tr>
+           <tr>
+               <td><strong>Tem Impact</strong><br/><input type="text" name="pltTemImpact">
+               <td><strong>Material CUVE</strong><br/><input type="text" name="pltMatCUVE">
+               <td><strong>Low temperture</strong><br/><input type="text" name="pltLowTemp">
+           </tr>
+
+           <tr><td><p><i>885Embrittlement Damage</i></p></td></tr>
+           <tr>
+               <td><strong>SCE</strong><br/><input type="text" name="pltSCE">
+               <td><strong>Reference Temperture</strong><br/><input type="text" name="pltRefeTemperture">
+               <td><strong>Temp Min for 885</strong><br/><input type="text" name="pltTemp885">
+               <td><strong>Brittle Check</strong><br/><input type="text" name="pltBriCheck">
+           </tr>
+           <tr><td><p><i> Sigma Phase</i></p></td></tr>
+           <tr>
+               <td><strong>Temp Shutdown</strong><br/><input type="text" name="pltTempShutdown">
+               <td><strong>Percent Sigma</strong><br/><input type="text" name="pltPerSigma">
+
+           </tr>
+
+           <tr><td><p><i>Piping Chanical Fatugue Damage</i></p></td></tr>
+           <tr>
+               <td><strong>No. of Pre Fatigue Failures</strong><br/><input type="text" name="pltNoFailures">
+               <td><strong>Severity of Vibration</strong><br/><input type="text" name="pltSevVibration">
+               <td><strong>No. of weeks</strong><br/><input type="text" name="pltNoWeeks">
+               <td><strong>Cyclic Type</strong><br/><input type="text" name="pltCycType">
+           </tr>
+           <tr>
+               <td><strong>Corrective Action Take</strong><br/><input type="text" name="pltCorrAcTake">
+               <td><strong>Total Pipe Fitting</strong><br/><input type="text" name="pltTotalFitting">
+               <td><strong>Type of Joint in This Piping</strong><br/><input type="text" name="pltTyThisPiping">
+               <td><strong>Condition of Pipe</strong><br/><input type="text" name="pltConPipe">
+           </tr>
+           <tr>
+               <td><strong>Branch Diameter</strong><br/><input type="text" name="pltBraDiameter">
+            </tr>
+   </table>
         </fieldset>
     <input type="submit" value="Create New Plan" class="button" align="right">
 </form>
