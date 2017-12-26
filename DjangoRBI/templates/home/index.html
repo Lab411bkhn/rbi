@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLGT</title>
+</head>
+<body>
+<table>
+<tr>
+    <th>API Component Type Name</th>
+    <th>GFFSmall</th>
+    <th>GFFMedium</th>
+    <th>GFFLarge</th>
+    <th>GFFRupture</th>
+    <th>GFFTotal</th>
+    <th>HoleCostSmall</th>
+    <th>HoleCostMedium</th>
+    <th>HoleCostLarge</th>
+    <th>HoleCostRupture</th>
+    <th>OutageSmall</th>
+    <th>OutageMedium</th>
+    <th>OutageLarge</th>
+    <th>OutageRupture</th>
+</tr>
+{% for b in obj %}
+<tr>
+    <td>{{ b.apicomponenttypename }}</td>
+    <td>{{ b.gffsmall }}</td>
+    <td>{{ b.gffmedium }}</td>
+    <td>{{ b.gfflarge }}</td>
+    <td>{{ b.gffrupture }}</td>
+    <td>{{ b.gfftotal }}</td>
+    <td>{{ b.holecostsmall}}</td>
+    <td>{{ b.holecostmedium }}</td>
+    <td>{{ b.holecostlarge }}</td>
+    <td>{{ b.holecostrupture }}</td>
+    <td>{{ b.outagesmall }}</td>
+    <td>{{ b.outagemedium }}</td>
+    <td>{{ b.outagelarge }}</td>
+    <td>{{ b.outagerupture }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
